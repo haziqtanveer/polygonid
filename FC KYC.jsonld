@@ -1,0 +1,31 @@
+{
+    "@context": [
+        {
+            "@protected": true,
+            "@version": 1.1,
+            "id": "@id",
+            "type": "@type",
+            "KYCSchema": {
+                "@context": {
+                    "@propagate": true,
+                    "@protected": true,
+                    "polygon-vocab": "urn:uuid:9425d27b-b388-46bb-bc14-0f2be6c0dcb9#",
+                    "xsd": "http://www.w3.org/2001/XMLSchema#",
+                    "document_number": {
+                        "@id": "polygon-vocab:document_number",
+                        "@type": "xsd:string"
+                    },
+                    "last_name": {
+                        "@id": "polygon-vocab:last_name",
+                        "@type": "xsd:string"
+                    },
+                    "first_name": {
+                        "@id": "polygon-vocab:first_name",
+                        "@type": "xsd:string"
+                    }
+                },
+                "@id": "urn:uuid:700916d1-cae7-49bd-8017-6dabb49975f2"
+            }
+        }
+    ]
+}

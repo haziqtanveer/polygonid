@@ -1,0 +1,112 @@
+{
+    "$metadata": {
+        "type": "KYCSchema",
+        "uris": {
+            "jsonLdContext": "ipfs://QmajWuNc2pgGprLiPjF7byYCwRy75GQxQb6voGJccLqr8u"
+        },
+        "version": "1.0"
+    },
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "description": "FC KYC",
+    "title": "FC KYC",
+    "properties": {
+        "@context": {
+            "type": [
+                "string",
+                "array",
+                "object"
+            ]
+        },
+        "expirationDate": {
+            "format": "date-time",
+            "type": "string"
+        },
+        "id": {
+            "type": "string"
+        },
+        "issuanceDate": {
+            "format": "date-time",
+            "type": "string"
+        },
+        "issuer": {
+            "type": [
+                "string",
+                "object"
+            ],
+            "format": "uri",
+            "properties": {
+                "id": {
+                    "format": "uri",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id"
+            ]
+        },
+        "type": {
+            "type": [
+                "string",
+                "array"
+            ],
+            "items": {
+                "type": "string"
+            }
+        },
+        "credentialSubject": {
+            "description": "Stores the data of the credential",
+            "title": "Credential subject",
+            "properties": {
+                "document_number": {
+                    "description": "Document Number",
+                    "title": "Document Number",
+                    "type": "string"
+                },
+                "last_name": {
+                    "description": "Last Name of Person",
+                    "title": "Last Name",
+                    "type": "string"
+                },
+                "first_name": {
+                    "description": "First Name Of Person",
+                    "title": "First Name",
+                    "type": "string"
+                },
+                "id": {
+                    "description": "Stores the DID of the subject that owns the credential",
+                    "title": "Credential subject ID",
+                    "format": "uri",
+                    "type": "string"
+                }
+            },
+            "required": [],
+            "type": "object"
+        },
+        "credentialSchema": {
+            "properties": {
+                "id": {
+                    "format": "uri",
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "type"
+            ],
+            "type": "object"
+        }
+    },
+    "required": [
+        "@context",
+        "id",
+        "issuanceDate",
+        "issuer",
+        "type",
+        "credentialSubject",
+        "credentialSchema"
+    ],
+    "type": "object"
+}
