@@ -2,7 +2,9 @@
     "$metadata": {
         "type": "KYCSchema",
         "uris": {
-            "jsonLdContext": "ipfs://QmajWuNc2pgGprLiPjF7byYCwRy75GQxQb6voGJccLqr8u"
+            "jsonLdContext": "https://raw.githubusercontent.com/haziqtanveer/polygonid/master/FC%20KYC.jsonld",
+            "jsonSchema": "https://raw.githubusercontent.com/haziqtanveer/polygonid/master/FC%20KYC.json"
+
         },
         "version": "1.0"
     },
